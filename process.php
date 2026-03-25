@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-$nama = $_POST['nama'];
-$alamat = $_POST['alamat'];
-$telefon = $_POST['telefon'];
-$tarikh = $_POST['tarikh'];
-$jenis = $_POST['jenis'];
-$tempoh = $_POST['tempoh'] ?? "";
-$alasan = $_POST['alasan'];
+$nama = trim($_POST['nama'] ?? '');
+$alamat = trim($_POST['alamat'] ?? '');
+$telefon = trim($_POST['telefon'] ?? '');
+$tarikh = $_POST['tarikh'] ?? '';
+$jenis = $_POST['jenis'] ?? '';
+$tempoh = $_POST['tempoh'] ?? '';
+$alasan = trim($_POST['alasan'] ?? '');
 
 $spec = "";
 if (isset($_POST['spec'])) {
@@ -16,21 +16,29 @@ if (isset($_POST['spec'])) {
 
 $error = "";
 
-if (empty($nama)) {
+/* VALIDATION */
+if ($nama == "") {
     $error = "Nama tidak diisi";
-} elseif (empty($alamat)) {
+} elseif ($alamat == "") {
     $error = "Alamat tidak diisi";
-} elseif (empty($telefon)) {
+} elseif ($telefon == "") {
     $error = "Telefon tidak diisi";
-} elseif (empty($tarikh)) {
+} elseif (!preg_match("/^[0-9+]{10,15}$/", $telefon)) {
+    $error = "Format nombor telefon tidak sah";
+} elseif ($tarikh == "") {
     $error = "Tarikh tidak diisi";
-} elseif (empty($jenis)) {
+} elseif ($jenis == "") {
     $error = "Jenis laptop tidak dipilih";
-} elseif (empty($tempoh)) {
+} elseif ($tempoh == "") {
     $error = "Tempoh tidak dipilih";
 } elseif (strlen($alasan) < 25) {
     $error = "Alasan mesti lebih 25 aksara";
-} else {
+}
+
+/* SIMPAN SESSION */
+$_SESSION['error'] = $error;
+
+if ($error == "") {
     $_SESSION['nama'] = $nama;
     $_SESSION['alamat'] = $alamat;
     $_SESSION['telefon'] = $telefon;
@@ -40,8 +48,6 @@ if (empty($nama)) {
     $_SESSION['spec'] = $spec;
     $_SESSION['alasan'] = $alasan;
 }
-
-$_SESSION['error'] = $error;
 
 header("Location: result.php");
 exit();

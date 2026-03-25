@@ -14,7 +14,7 @@
 
         <h1 class="title">Keputusan Permohonan</h1>
 
-        <?php if (isset($_SESSION['error']) && $_SESSION['error'] != ""): ?>
+        <?php if (!empty($_SESSION['error'])): ?>
 
             <div class="error-box">
                 <?php echo $_SESSION['error']; ?>
@@ -31,7 +31,6 @@
             </div>
 
             <table class="result-table">
-
                 <thead>
                     <tr>
                         <th>Maklumat</th>
@@ -40,49 +39,46 @@
                 </thead>
 
                 <tbody>
-
                     <tr>
-                        <td>Nama Penuh</td>
-                        <td><?php echo $_SESSION['nama']; ?></td>
+                        <td>Nama</td>
+                        <td><?php echo htmlspecialchars($_SESSION['nama']); ?></td>
                     </tr>
 
                     <tr>
                         <td>Alamat</td>
-                        <td><?php echo $_SESSION['alamat']; ?></td>
+                        <td><?php echo htmlspecialchars($_SESSION['alamat']); ?></td>
                     </tr>
 
                     <tr>
-                        <td>Nombor Telefon</td>
-                        <td><?php echo $_SESSION['telefon']; ?></td>
+                        <td>Telefon</td>
+                        <td><?php echo htmlspecialchars($_SESSION['telefon']); ?></td>
                     </tr>
 
                     <tr>
-                        <td>Tarikh Permohonan</td>
-                        <td><?php echo $_SESSION['tarikh']; ?></td>
+                        <td>Tarikh</td>
+                        <td><?php echo htmlspecialchars($_SESSION['tarikh']); ?></td>
                     </tr>
 
                     <tr>
-                        <td>Jenis Laptop</td>
-                        <td><?php echo $_SESSION['jenis']; ?></td>
+                        <td>Jenis</td>
+                        <td><?php echo htmlspecialchars($_SESSION['jenis']); ?></td>
                     </tr>
 
                     <tr>
                         <td>Spesifikasi</td>
-                        <td><?php echo $_SESSION['spec']; ?></td>
+                        <td><?php echo htmlspecialchars($_SESSION['spec']); ?></td>
                     </tr>
 
                     <tr>
-                        <td>Tempoh Pinjaman</td>
-                        <td><?php echo $_SESSION['tempoh']; ?></td>
+                        <td>Tempoh</td>
+                        <td><?php echo htmlspecialchars($_SESSION['tempoh']); ?></td>
                     </tr>
 
                     <tr>
-                        <td>Alasan Permohonan</td>
-                        <td class="wrap-text"><?php echo $_SESSION['alasan']; ?></td>
+                        <td>Alasan</td>
+                        <td class="wrap-text"><?php echo htmlspecialchars($_SESSION['alasan']); ?></td>
                     </tr>
-
                 </tbody>
-
             </table>
 
             <div class="center">

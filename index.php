@@ -21,31 +21,32 @@
                 <!-- Nama -->
                 <div class="form-group">
                     <label>Nama Penuh</label>
-                    <input type="text" name="nama" class="input">
+                    <input type="text" name="nama" class="input" required>
                 </div>
 
                 <!-- Alamat -->
                 <div class="form-group">
                     <label>Alamat</label>
-                    <textarea name="alamat" class="textarea"></textarea>
+                    <textarea name="alamat" class="textarea" required></textarea>
                 </div>
 
                 <!-- Telefon -->
                 <div class="form-group">
                     <label>Nombor Telefon</label>
-                    <input type="number" name="telefon" class="input">
+                    <input type="text" name="telefon" class="input" pattern="[0-9+]{10,15}"
+                        placeholder="Contoh: 0123456789" required>
                 </div>
 
                 <!-- Tarikh -->
                 <div class="form-group">
                     <label>Tarikh</label>
-                    <input type="date" name="tarikh" class="input">
+                    <input type="date" name="tarikh" class="input" required>
                 </div>
 
                 <!-- Jenis -->
                 <div class="form-group">
                     <label>Jenis Laptop</label>
-                    <select name="jenis" class="input">
+                    <select name="jenis" class="input" required>
                         <option value="">-- Pilih --</option>
                         <option>Dell</option>
                         <option>HP</option>
@@ -71,7 +72,7 @@
             <div class="form-group full">
                 <label>Tempoh Pinjaman</label>
                 <div class="group">
-                    <label><input type="radio" name="tempoh" value="1 Bulan"> 1 Bulan</label>
+                    <label><input type="radio" name="tempoh" value="1 Bulan" required> 1 Bulan</label>
                     <label><input type="radio" name="tempoh" value="3 Bulan"> 3 Bulan</label>
                 </div>
             </div>
@@ -79,7 +80,7 @@
             <!-- Alasan -->
             <div class="form-group full">
                 <label>Alasan Permohonan</label>
-                <textarea name="alasan" class="textarea"></textarea>
+                <textarea name="alasan" class="textarea" required></textarea>
             </div>
 
             <!-- Button -->
