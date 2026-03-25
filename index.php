@@ -56,6 +56,7 @@
                 <label><input type="checkbox" name="spec[]" value="RAM 8GB"> RAM 8GB</label>
                 <label><input type="checkbox" name="spec[]" value="RAM 16GB"> RAM 16GB</label>
                 <label><input type="checkbox" name="spec[]" value="SSD 512GB"> SSD 512GB</label>
+                <label><input type="checkbox" name="spec[]" value="SSD 1TB"> SSD 512GB</label>
             </div>
 
             <label class="label">Tempoh Pinjaman</label>
