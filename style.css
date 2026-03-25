@@ -1,147 +1,72 @@
 body {
-
-    font-family: Arial;
     margin: 0;
-    padding: 0;
+    font-family: Arial;
     background: linear-gradient(120deg, #4facfe, #00f2fe);
-
 }
 
 .container {
-
     width: 650px;
     margin: 50px auto;
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-
 }
 
 .title {
-
     text-align: center;
-    color: #333;
-
 }
 
 .label {
-
-    font-weight: bold;
-    margin-top: 15px;
     display: block;
-
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-.input {
-
+.input,
+.textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: 0.3s;
-
 }
 
-.input:focus {
-
+.input:focus,
+.textarea:focus {
     border-color: #4facfe;
     outline: none;
-    box-shadow: 0 0 5px #4facfe;
-
 }
 
-.textarea {
-
-    width: 100%;
-    height: 90px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-
-}
-
-.check-group label,
-.radio-group label {
-
+.group label {
     display: block;
     margin-top: 5px;
-
 }
 
-.button-group {
-
+.btn-group {
     text-align: center;
     margin-top: 20px;
-
 }
 
 .btn-submit {
-
     background: #27ae60;
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px;
-
-}
-
-.btn-submit:hover {
-
-    background: #219150;
-
 }
 
 .btn-reset {
-
     background: #e74c3c;
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
-.btn-reset:hover {
-
-    background: #c0392b;
-
-}
-
-.error {
-
-    background: #ffdddd;
-    color: red;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-
-}
-
-.success {
-
-    background: #ddffdd;
-    color: green;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-
-}
-
-.result-box {
-
-    background: #f5f5f5;
-    padding: 15px;
-    border-radius: 5px;
-
-}
-
-.back-btn {
-
+.btn-back {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 15px;
@@ -149,5 +74,25 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
 
+.error {
+    background: #ffdddd;
+    color: red;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.success {
+    background: #ddffdd;
+    color: green;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.result-box {
+    background: #f5f5f5;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
