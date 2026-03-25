@@ -17,95 +17,92 @@ body {
 /* TITLE */
 .title {
     text-align: center;
-    margin-bottom: 20px;
     color: #333;
+    margin-bottom: 20px;
 }
 
-/* GRID LAYOUT */
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-/* FORM GROUP */
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-/* FULL WIDTH */
-.form-group.full {
-    grid-column: span 2;
-}
-
-/* LABEL */
-.label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* INPUT */
-.input,
-.textarea {
+/* TABLE */
+.result-table {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+/* HEADER */
+.result-table th {
+    background: #4facfe;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* CELL */
+.result-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+/* LEFT COLUMN FIX WIDTH */
+.result-table td:first-child {
+    width: 35%;
+    font-weight: bold;
+}
+
+/* TEXT WRAP */
+.wrap-text {
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* ZEBRA */
+.result-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* HOVER */
+.result-table tr:hover {
+    background: #f1f1f1;
+}
+
+/* SUCCESS */
+.success-box {
+    background: #e0ffe5;
+    color: #27ae60;
+    padding: 15px;
+    border-left: 5px solid green;
     border-radius: 5px;
-    transition: 0.3s;
+    margin-bottom: 20px;
 }
 
-/* FOCUS EFFECT */
-.input:focus,
-.textarea:focus {
-    border-color: #4facfe;
-    outline: none;
-    box-shadow: 0 0 5px #4facfe;
-}
-
-/* TEXTAREA */
-.textarea {
-    height: 80px;
-}
-
-/* CHECKBOX & RADIO */
-.group {
-    margin-top: 10px;
-}
-
-.group label {
-    margin-right: 15px;
+/* ERROR */
+.error-box {
+    background: #ffe0e0;
+    color: #c0392b;
+    padding: 15px;
+    border-left: 5px solid red;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 /* BUTTON */
-.btn-group {
+.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn-back:hover {
+    background: #2980b9;
+}
+
+/* CENTER */
+.center {
     text-align: center;
     margin-top: 20px;
-}
-
-.btn-submit {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.btn-submit:hover {
-    background: #219150;
-}
-
-.btn-reset {
-    background: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-reset:hover {
-    background: #c0392b;
 }

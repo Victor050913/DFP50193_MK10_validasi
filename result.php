@@ -32,50 +32,56 @@
 
             <table class="result-table">
 
-                <tr>
-                    <th>Maklumat</th>
-                    <th>Butiran</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Maklumat</th>
+                        <th>Butiran</th>
+                    </tr>
+                </thead>
 
-                <tr>
-                    <td>Nama Penuh</td>
-                    <td><?php echo $_SESSION['nama']; ?></td>
-                </tr>
+                <tbody>
 
-                <tr>
-                    <td>Alamat</td>
-                    <td><?php echo $_SESSION['alamat']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Nama Penuh</td>
+                        <td><?php echo $_SESSION['nama']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Nombor Telefon</td>
-                    <td><?php echo $_SESSION['telefon']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td><?php echo $_SESSION['alamat']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Tarikh Permohonan</td>
-                    <td><?php echo $_SESSION['tarikh']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Nombor Telefon</td>
+                        <td><?php echo $_SESSION['telefon']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Jenis Laptop</td>
-                    <td><?php echo $_SESSION['jenis']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Tarikh Permohonan</td>
+                        <td><?php echo $_SESSION['tarikh']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Spesifikasi</td>
-                    <td><?php echo $_SESSION['spec']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Jenis Laptop</td>
+                        <td><?php echo $_SESSION['jenis']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Tempoh Pinjaman</td>
-                    <td><?php echo $_SESSION['tempoh']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Spesifikasi</td>
+                        <td><?php echo $_SESSION['spec']; ?></td>
+                    </tr>
 
-                <tr>
-                    <td>Alasan Permohonan</td>
-                    <td><?php echo $_SESSION['alasan']; ?></td>
-                </tr>
+                    <tr>
+                        <td>Tempoh Pinjaman</td>
+                        <td><?php echo $_SESSION['tempoh']; ?></td>
+                    </tr>
+
+                    <tr>
+                        <td>Alasan Permohonan</td>
+                        <td class="wrap-text"><?php echo $_SESSION['alasan']; ?></td>
+                    </tr>
+
+                </tbody>
 
             </table>
 
