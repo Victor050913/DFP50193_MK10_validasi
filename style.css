@@ -106,3 +106,26 @@ body {
     text-align: center;
     margin-top: 20px;
 }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+.group {
+    margin-top: 5px;
+}
+
+.group label {
+    margin-right: 15px;
+}
