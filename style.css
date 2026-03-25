@@ -4,8 +4,9 @@ body {
     background: linear-gradient(120deg, #4facfe, #00f2fe);
 }
 
+/* CONTAINER */
 .container {
-    width: 650px;
+    width: 700px;
     margin: 50px auto;
     background: white;
     padding: 30px;
@@ -13,86 +14,77 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* TITLE */
 .title {
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.input,
-.textarea {
+/* TABLE DESIGN */
+.result-table {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.input:focus,
-.textarea:focus {
-    border-color: #4facfe;
-    outline: none;
-}
-
-.group label {
-    display: block;
-    margin-top: 5px;
-}
-
-.btn-group {
-    text-align: center;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
-.btn-submit {
-    background: #27ae60;
+.result-table th {
+    background: #4facfe;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 12px;
+    text-align: left;
 }
 
-.btn-reset {
-    background: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.result-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
+.result-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.result-table tr:hover {
+    background: #f1f1f1;
+}
+
+/* SUCCESS */
+.success-box {
+    background: #e0ffe5;
+    color: #27ae60;
+    padding: 15px;
+    border-left: 5px solid green;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* ERROR */
+.error-box {
+    background: #ffe0e0;
+    color: #c0392b;
+    padding: 15px;
+    border-left: 5px solid red;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
 .btn-back {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background: #3498db;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
-.error {
-    background: #ffdddd;
-    color: red;
-    padding: 15px;
-    border-radius: 5px;
+.btn-back:hover {
+    background: #2980b9;
 }
 
-.success {
-    background: #ddffdd;
-    color: green;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.result-box {
-    background: #f5f5f5;
-    padding: 15px;
+/* CENTER ALIGN */
+.center {
+    text-align: center;
     margin-top: 20px;
-    border-radius: 5px;
 }
